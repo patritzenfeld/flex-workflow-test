@@ -3,6 +3,7 @@ name: workflow-test
 extra-source-files: [ ]
 dependencies:
   - base
+  - output-blocks
 default-extensions:
   - TupleSections
   - DuplicateRecordFields

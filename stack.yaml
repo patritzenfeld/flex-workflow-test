@@ -3,7 +3,7 @@ resolver: nightly-2024-03-20
 packages:
   - .
 extra-deps:
-#  - git: https://github.com/fmidue/output-blocks.git
-#    commit: fd2e08e3f3b1b7848608f65b1e796c5fc24d137b
-#    subdirs:
-#      - output-blocks
+  - git: https://github.com/fmidue/output-blocks.git
+    commit: fd2e08e3f3b1b7848608f65b1e796c5fc24d137b
+    subdirs:
+      - ./*
