@@ -16,4 +16,3 @@ jobs:
       settings-gens: test-gens
       script: tasks
       commit: ${{ github.sha }}
-      ssh-key: ${{ secrets.SSH_PRIVATE_KEY}}
