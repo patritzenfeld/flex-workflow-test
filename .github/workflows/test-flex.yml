@@ -16,9 +16,10 @@ permissions: write-all
 
 jobs:
   test:
-    - uses: fmidue/flex-tasks/.github/workflows/test-flex.yml@workflow-reusable
-      with:
-        tasks: tasks
-        config: config
-        settings-gens: test-gens
-        script: tasks
+    steps:
+      - uses: fmidue/flex-tasks/.github/workflows/test-flex.yml@workflow-reusable
+        with:
+          tasks: tasks
+          config: config
+          settings-gens: test-gens
+          script: tasks
