@@ -4,7 +4,7 @@ name: Compile and Lint Flex-Tasks
 on:
   push:
     branches: [main]
-# t
+
 permissions: write-all
 
 jobs:
