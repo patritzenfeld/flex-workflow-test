@@ -12,12 +12,10 @@ on:
   push:
     branches: [main]
 
-permissions: read-all
+permissions: write-all
 
 jobs:
   test:
-    permissions:
-      contents: write
     uses: fmidue/flex-tasks/.github/workflows/test-flex.yml@workflow-reusable
     with:
       tasks: tasks
