@@ -15,4 +15,4 @@ jobs:
       config: config
       settings-gens: test-gens
       script: tasks
-      commit: ${{ github.event.client_payload.sha }}
+      commit: ${{ github.sha }}
