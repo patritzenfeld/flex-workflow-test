@@ -1,0 +1,24 @@
+---
+name: workflow-test
+extra-source-files: [ ]
+dependencies:
+  - base
+default-extensions:
+  - TupleSections
+  - DuplicateRecordFields
+  - OverloadedLabels
+  - MultiParamTypeClasses
+  - FlexibleInstances
+  - TypeApplications
+  - ScopedTypeVariables
+  - NamedFieldPuns
+  - FlexibleContexts
+library:
+  source-dirs: src
+  exposed-modules:
+    - Code
+  ghc-options:
+    - -Wall
+    - -Widentities
+    - -Werror
+
