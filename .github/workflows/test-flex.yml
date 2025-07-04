@@ -1,6 +1,9 @@
 ---
 name: Compile and Lint Flex-Tasks
 
+env:
+  TERM: xterm
+
 on:
   push:
     branches: [main]
