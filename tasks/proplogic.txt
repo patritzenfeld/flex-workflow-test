@@ -230,7 +230,7 @@ checkers fSol = [i|
 module Check (checkSemantics, checkSyntax) where
 
 
-import Control.Monad                    (when)
+import Control.Monad                    (when, unless)
 import Control.OutputCapable.Blocks
 import Data.Containers.ListUtils        (nubOrd)
 import Data.Foldable                    (toList)
@@ -267,10 +267,10 @@ correctColumn (f,bs) = all lookFor allocationsAndValues
   where
     ones = Sat.solve_all $ convert f
     allocations = filter ((`elem` atoms) . fst) <$>
-      #{map (zip "ABCD" . map (truth . fromJust)) $ transpose startingTable} --ignore-length
+      #{map (zip "ABCD" . map (truth . fromJust)) $ transpose startingTable}
     allocationsAndValues = [(truth a,b) | (Just a,b) <- zip bs allocations]
     lookFor (True,a) = fromList a `elem` ones
-    lookFor (False,a) = fromList a `notElem` ones
+    lookFor (False,a) = fromList a `notElem` (ones)
     atoms = toList f
 
 
